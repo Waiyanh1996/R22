@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Markets Map :: created by GEOCADDER</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="jquery-ui.css" rel="stylesheet" /> -->
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <!-- Turf.js plugin -->
+    <!-- <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script> -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js"></script>
+  </head>
+
+  <body>
+  
+      <div id="sidebar"></div>
+      <div id="sidebar-popup"></div>
+
+      <div class="toggle-filter-box">
+        <div>
+          <div class="welcome-content">
+            <span class="welcome-close-button">X</span>
+            <div class="sidebar-content-inner">
+              <h1 class="welcome-popup">Filter</h1>
+            </div>
+          </div>
+
+          
+
+           <fieldset id="filter-by-first-type">
+            <div id="list1" class="dropdown-check-list" tabindex="104">
+              <span class="anchor">Risk</span>
+              <ul class="items">
+                <li>
+                  <input
+                    name="filter-by-first-type-input"
+                    id="first-low"
+                    type="checkbox"
+                    value="first-low"
+                    checked
+                  /><label for="first-low">Low Risk</label
+                  >
+                </li>
+                <li>
+                  <input
+                    name="filter-by-first-type-input"
+                    id="first-moderate"
+                    type="checkbox"
+                    value="first-moderate"
+                    checked
+                  /><label for="first-moderate">Moderate Risk</label
+                  >
+                </li>
+                <li>
+                  <input
+                    name="filter-by-first-type-input"
+                    id="first-high"
+                    type="checkbox"
+                    value="first-high"
+                    checked
+                  /><label for="first-high">High Risk</label
+                  >
+                </li>
+                <li></li>
+                  <input
+                    name="filter-by-first-type-input"
+                    id="first-tbd"
+                    type="checkbox"
+                    value="first-tbd"
+                    checked
+                  /><label for="first-tbd">TBD</label
+                  >
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset id="filter-by-second-type">
+            <div id="list2" class="dropdown-check-list" tabindex="103">
+              <span class="anchor">Tiers</span>
+              <ul class="items">
+                <li>
+                  <input
+                    name="filter-by-second-type-input"
+                    id="second-1"
+                    type="checkbox"
+                    value="second-1"
+                    checked
+                  /><label for="second-1">Tier 1</label
+                  ><img
+                    class="legend-image"
+                    src="icons/1.svg"
+                  />
+                </li>
+                <li>
+                  <input
+                    name="filter-by-second-type-input"
+                    id="second-2"
+                    type="checkbox"
+                    value="second-2"
+                    checked
+                  /><label for="second-2">Tier 2</label
+                  ><img
+                    class="legend-image"
+                    src="icons/2.svg"
+                  />
+                </li>
+                <li>
+                  <input
+                    name="filter-by-second-type-input"
+                    id="second-3"
+                    type="checkbox"
+                    value="second-3"
+                    checked
+                  /><label for="second-3">Tier 3</label
+                  ><img
+                    class="legend-image"
+                    src="icons/3.svg"
+                  />
+                </li>
+                <li></li>
+                  <input
+                    name="filter-by-second-type-input"
+                    id="second-tbd"
+                    type="checkbox"
+                    value="second-tbd"
+                    checked
+                  /><label for="second-tbd">TBD</label
+                  ><img
+                    class="legend-image"
+                    src="icons/tbd.svg"
+                  />
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset id="filter-by-third-type">
+            <div id="list3" class="dropdown-check-list" tabindex="102">
+              <span class="anchor">Market</span>
+              <ul class="items"></ul>
+            </div>
+          </fieldset>
+
+        </div>
+      </div>
+
+      <div id="map"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
